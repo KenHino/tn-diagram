@@ -1,6 +1,11 @@
 # tn-diagram
 Tensor Network diagram repository
 
+## Tools
+- [Graphviz](https://graphviz.org/)
+- [Draw.io](https://app.diagrams.net/)
+
+## Assets
 - [Sample](graphviz/sample.dot)
   
   ![](graphviz/sample.svg)
