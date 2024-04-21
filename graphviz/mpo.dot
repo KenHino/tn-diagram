@@ -1,0 +1,39 @@
+digraph MPO {
+  rankdir=TD;
+  bgcolor=transparent;
+  node [shape=circle style=filled, width=0.8, height=0.8, fontname="Arial"];
+  edge [fontname="Arial Italic", penwidth=2.0];
+
+  W1 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  W2 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  W3 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  W4 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+
+  W1_ket [label="" width=0 style=invis];
+  W2_ket [label="" width=0 style=invis];
+  W3_ket [label="" width=0 style=invis];
+  W4_ket [label="" width=0 style=invis];
+
+  W1_bra [label="" width=0 style=invis];
+  W2_bra [label="" width=0 style=invis];
+  W3_bra [label="" width=0 style=invis];
+  W4_bra [label="" width=0 style=invis];
+
+  W1_bra -> W1 [label="n₁′" arrowhead=none];
+  W2_bra -> W2 [label="n₂′" arrowhead=none];
+  W3_bra -> W3 [label="n₃′" arrowhead=none];
+  W4_bra-> W4 [label="n₄′" arrowhead=none];
+
+  W1 -> W2 [label="β₁" arrowhead=none];
+  W2 -> W3 [label="β₂" arrowhead=none];
+  W3 -> W4 [label="β₃" arrowhead=none];
+
+  W1 -> W1_ket [label="n₁" arrowhead=none];
+  W2 -> W2_ket [label="n₂" arrowhead=none];
+  W3 -> W3_ket [label="n₃" arrowhead=none];
+  W4 -> W4_ket [label="n₄" arrowhead=none];
+
+  {rank=same; W1_bra; W2_bra; W3_bra; W4_bra;}
+  {rank=same; W1; W2; W3; W4;}
+  {rank=same; W1_ket; W2_ket; W3_ket; W4_ket;}
+}

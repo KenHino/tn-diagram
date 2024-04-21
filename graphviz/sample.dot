@@ -1,0 +1,23 @@
+digraph MPS {
+  rankdir=TD;
+
+  node [shape=circle style=filled];
+
+  A [label="A" fillcolor="#9558B2"]; // 紫
+  B [label="A" fillcolor="#EA6B5A"]; // 赤
+  C [label="A" fillcolor="#60BB93"]; // 緑
+
+  A_dummy [label="" width=0 style=invis];
+  B_dummy [label="" width=0 style=invis];
+  C_dummy [label="" width=0 style=invis];
+
+  A -> A_dummy [label="" arrowhead=none];
+  B -> B_dummy [label="" arrowhead=none];
+  C -> C_dummy [label="" arrowhead=none];
+
+  A -> B [label="" arrowhead=none];
+  B -> C [label="" arrowhead=none];
+
+  {rank=same; A; B; C}
+  {rank=same; A_dummy; B_dummy; C_dummy}
+}

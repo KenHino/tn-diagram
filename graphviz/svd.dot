@@ -1,0 +1,19 @@
+digraph SVG {
+  rankdir=TD;
+  bgcolor=transparent;
+
+  node [shape=circle style=filled, width=0.8, height=0.8, fontname="Arial"];
+
+  U [label="U" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  Sigma [label="Σ" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  V [label="V⊺" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  U_dummy [label="" width=0 style=invis];
+  V_dummy [label="" width=0 style=invis];
+
+  U_dummy -> U [label="i" arrowhead=none];
+  U -> Sigma [label="k" arrowhead=none];
+  Sigma -> V [label="k" arrowhead=none];
+  V -> V_dummy [label="j" arrowhead=none];
+
+  {rank=same; U_dummy, U, Sigma, V, V_dummy}
+}

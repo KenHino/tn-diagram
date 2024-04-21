@@ -1,0 +1,16 @@
+digraph Matrix {
+  rankdir=TD;
+  bgcolor=transparent;
+
+  node [shape=circle style=filled];
+
+  A [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+
+  A_dummy1 [label="" width=0 style=invis];
+  A_dummy2 [label="" width=0 style=invis];
+
+  A_dummy1 -> A [label="i" arrowhead=none];
+  A -> A_dummy2 [label="j" arrowhead=none];
+
+  {rank=same; A; A_dummy1; A_dummy2;}
+}

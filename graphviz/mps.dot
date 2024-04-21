@@ -1,0 +1,27 @@
+digraph MPS {
+  rankdir=TD;
+  bgcolor=transparent;
+  node [shape=circle style=filled, width=0.8, height=0.8, fontname="Arial"];
+  edge [fontname="Arial Italic", penwidth=2.0];
+  A1 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  A2 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  A3 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  A4 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+
+  A1_dummy [label="" width=0 style=invis];
+  A2_dummy [label="" width=0 style=invis];
+  A3_dummy [label="" width=0 style=invis];
+  A4_dummy [label="" width=0 style=invis];
+
+  A1_dummy -> A1 [label="n₁" arrowhead=none];
+  A2_dummy -> A2 [label="n₂" arrowhead=none];
+  A3_dummy -> A3 [label="n₃" arrowhead=none];
+  A4_dummy -> A4 [label="n₄" arrowhead=none];
+
+  A1 -> A2 [label="τ₁" arrowhead=none];
+  A2 -> A3 [label="τ₂" arrowhead=none];
+  A3 -> A4 [label="τ₃" arrowhead=none];
+
+  {rank=same; A1_dummy; A2_dummy; A3_dummy; A4_dummy;}
+  {rank=same; A1; A2; A3; A4;}
+}
