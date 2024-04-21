@@ -16,12 +16,16 @@ Tensor Network diagram repository
 - [MPS](graphviz/mps.dot)
   
   ![](graphviz/mps.svg)
+  ![](drawio/tensor-network-MPS.drawio.svg)
+  ![](drawio/tensor-network-TTD.drawio.svg)
 
 
 - [MPO](graphviz/mpo.dot)
   
   ![](graphviz/mpo.svg)
+  ![](drawio/tensor-network-MPO.drawio.svg)
 
 - [Contraction](graphviz/g-mpo.dot)
   
   ![](graphviz/g-mpo.svg)
+  ![](drawio/tensor-network-OpMult.drawio.svg)
