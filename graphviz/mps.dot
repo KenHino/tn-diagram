@@ -7,21 +7,29 @@ digraph MPS {
   A2 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
   A3 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
   A4 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  A5 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  A6 [label="A" fillcolor="#00205b" fontcolor="white"]; // 濃紺
 
   A1_dummy [label="" width=0 style=invis];
   A2_dummy [label="" width=0 style=invis];
   A3_dummy [label="" width=0 style=invis];
   A4_dummy [label="" width=0 style=invis];
+  A5_dummy [label="" width=0 style=invis];
+  A6_dummy [label="" width=0 style=invis];
 
-  A1_dummy -> A1 [label="n₁" arrowhead=none];
-  A2_dummy -> A2 [label="n₂" arrowhead=none];
-  A3_dummy -> A3 [label="n₃" arrowhead=none];
-  A4_dummy -> A4 [label="n₄" arrowhead=none];
+  A1_dummy -> A1 [label="𝜎₁" arrowhead=none];
+  A2_dummy -> A2 [label="𝜎₂" arrowhead=none];
+  A3_dummy -> A3 [label="𝜎₃" arrowhead=none];
+  A4_dummy -> A4 [label="𝜎₄" arrowhead=none];
+  A5_dummy -> A5 [label="𝜎₅" arrowhead=none];
+  A6_dummy -> A6 [label="𝜎₆" arrowhead=none];
 
   A1 -> A2 [label="τ₁" arrowhead=none];
   A2 -> A3 [label="τ₂" arrowhead=none];
   A3 -> A4 [label="τ₃" arrowhead=none];
+  A4 -> A5 [label="τ₄" arrowhead=none];
+  A5 -> A6 [label="τ₅" arrowhead=none];
 
-  {rank=same; A1_dummy; A2_dummy; A3_dummy; A4_dummy;}
-  {rank=same; A1; A2; A3; A4;}
+  {rank=same; A1_dummy; A2_dummy; A3_dummy; A4_dummy;  A5_dummy; A6_dummy;}
+  {rank=same; A1; A2; A3; A4; A5; A6;}
 }

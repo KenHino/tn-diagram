@@ -8,32 +8,44 @@ digraph MPO {
   W2 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
   W3 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
   W4 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  W5 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
+  W6 [label="W" fillcolor="#00205b" fontcolor="white"]; // 濃紺
 
   W1_ket [label="" width=0 style=invis];
   W2_ket [label="" width=0 style=invis];
   W3_ket [label="" width=0 style=invis];
   W4_ket [label="" width=0 style=invis];
+  W5_ket [label="" width=0 style=invis];
+  W6_ket [label="" width=0 style=invis];
 
   W1_bra [label="" width=0 style=invis];
   W2_bra [label="" width=0 style=invis];
   W3_bra [label="" width=0 style=invis];
   W4_bra [label="" width=0 style=invis];
+  W5_bra [label="" width=0 style=invis];
+  W6_bra [label="" width=0 style=invis];
 
-  W1_bra -> W1 [label="n₁′" arrowhead=none];
-  W2_bra -> W2 [label="n₂′" arrowhead=none];
-  W3_bra -> W3 [label="n₃′" arrowhead=none];
-  W4_bra-> W4 [label="n₄′" arrowhead=none];
+  W1_bra -> W1 [label="𝜎₁′" arrowhead=none];
+  W2_bra -> W2 [label="𝜎₂′" arrowhead=none];
+  W3_bra -> W3 [label="𝜎₃′" arrowhead=none];
+  W4_bra-> W4 [label="𝜎₄′" arrowhead=none];
+  W5_bra -> W5 [label="𝜎₅′" arrowhead=none];
+  W6_bra -> W6 [label="𝜎₆′" arrowhead=none];
 
   W1 -> W2 [label="β₁" arrowhead=none];
   W2 -> W3 [label="β₂" arrowhead=none];
   W3 -> W4 [label="β₃" arrowhead=none];
+  W4 -> W5 [label="β₄" arrowhead=none];
+  W5 -> W6 [label="β₅" arrowhead=none];
 
-  W1 -> W1_ket [label="n₁" arrowhead=none];
-  W2 -> W2_ket [label="n₂" arrowhead=none];
-  W3 -> W3_ket [label="n₃" arrowhead=none];
-  W4 -> W4_ket [label="n₄" arrowhead=none];
+  W1 -> W1_ket [label="𝜎₁" arrowhead=none];
+  W2 -> W2_ket [label="𝜎₂" arrowhead=none];
+  W3 -> W3_ket [label="𝜎₃" arrowhead=none];
+  W4 -> W4_ket [label="𝜎₄" arrowhead=none];
+  W5 -> W5_ket [label="𝜎₅" arrowhead=none];
+  W6 -> W6_ket [label="𝜎₆" arrowhead=none];
 
-  {rank=same; W1_bra; W2_bra; W3_bra; W4_bra;}
-  {rank=same; W1; W2; W3; W4;}
-  {rank=same; W1_ket; W2_ket; W3_ket; W4_ket;}
+  {rank=same; W1_bra; W2_bra; W3_bra; W4_bra; W5_bra; W6_bra;}
+  {rank=same; W1; W2; W3; W4; W5; W6;}
+  {rank=same; W1_ket; W2_ket; W3_ket; W4_ket; W5_ket; W6_ket;}
 }

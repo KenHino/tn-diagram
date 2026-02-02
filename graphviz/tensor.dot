@@ -1,0 +1,51 @@
+digraph Tensor {
+  rankdir=TD;
+  bgcolor=transparent;
+  splines=false;
+  node [style=filled, fontname="Arial"];
+  edge [fontname="Arial Italic", penwidth=2.0];
+  
+  A1_dummy [label="" style=invis shape=circle];
+  A2_dummy [label="" style=invis shape=circle];
+  A3_dummy [label="" style=invis shape=circle];
+  A4_dummy [label="" style=invis shape=circle];
+  A5_dummy [label="" style=invis shape=circle];
+  A6_dummy [label="" style=invis shape=circle];
+  
+  {rank=same; A1_dummy A2_dummy A3_dummy A4_dummy A5_dummy A6_dummy}
+
+  subgraph cluster_C {
+    label = "C";
+    bgcolor="#00205b";
+    fontcolor="white";
+    shape=ellipse;
+    style="rounded";
+    A1 [label="" style=invis shape=circle];
+    A2 [label="" style=invis shape=circle];
+    A3 [label="" style=invis shape=circle];
+    A4 [label="" style=invis shape=circle];
+    A5 [label="" style=invis shape=circle];
+    A6 [label="" style=invis shape=circle];
+
+  }
+
+  // A1_dummy [label="" style=invis shape=ellipse width=5];
+  
+  //A1 [label="C" fillcolor="#00205b" fontcolor="white" shape=ellipse width=5];
+  
+  A1_dummy -> A1 [label="" style=invis lhead=cluster_C];
+  A2_dummy -> A2 [label="" style=invis lhead=cluster_C];
+  A3_dummy -> A3 [label="" style=invis lhead=cluster_C];
+  A4_dummy -> A4 [label="" style=invis lhead=cluster_C];
+  A5_dummy -> A5 [label="" style=invis lhead=cluster_C];
+  A6_dummy -> A6 [label="" style=invis lhead=cluster_C];
+  
+
+  A1 -> A1_dummy [label="𝜎₁" arrowhead=none ltail=cluster_C];
+  A2 -> A2_dummy [label="𝜎₂" arrowhead=none ltail=cluster_C];
+  A3 -> A3_dummy [label="𝜎₃" arrowhead=none ltail=cluster_C];
+  A4 -> A4_dummy [label="𝜎₄" arrowhead=none ltail=cluster_C];
+  A5 -> A5_dummy [label="𝜎₅" arrowhead=none ltail=cluster_C];
+  A6 -> A6_dummy [label="𝜎₆" arrowhead=none ltail=cluster_C];
+
+}
